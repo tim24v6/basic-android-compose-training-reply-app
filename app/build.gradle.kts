@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.reply"
-        minSdk = 24
+        minSdk = 23 //24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -57,9 +57,10 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
-    packaging {
+    // dac packagingOptions i odslonic
+    packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
@@ -75,7 +76,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.core:core-ktx:1.9.0")  //1.10.1
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:${rootProject.extra["lifecycle_version"]}")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:${rootProject.extra["lifecycle_version"]}")
 
